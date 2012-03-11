@@ -1,0 +1,26 @@
+<h1>Alerts</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Alertstatus</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @alerts.each do |alert| %>
+      <tr>
+        <td><%= alert.id %></td>
+        <td><%= link_to alert.alertstatus_id, alert_path(alert) %></td>
+        <td><%= alert.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_alert_path(alert), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', alert_path(alert), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_alert_path, :class => 'btn btn-primary' %>

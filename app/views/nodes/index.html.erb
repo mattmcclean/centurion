@@ -1,0 +1,26 @@
+<h1>Nodes</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @nodes.each do |node| %>
+      <tr>
+        <td><%= node.id %></td>
+        <td><%= link_to node.name, node_path(node) %></td>
+        <td><%= node.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_node_path(node), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', node_path(node), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_node_path, :class => 'btn btn-primary' %>

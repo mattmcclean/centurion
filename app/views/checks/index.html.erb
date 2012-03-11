@@ -1,0 +1,26 @@
+<h1>Checks</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @checks.each do |check| %>
+      <tr>
+        <td><%= check.id %></td>
+        <td><%= link_to check.name, check_path(check) %></td>
+        <td><%= check.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_check_path(check), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', check_path(check), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_check_path, :class => 'btn btn-primary' %>

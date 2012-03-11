@@ -1,0 +1,32 @@
+<h1>Check</h1>
+
+<p>
+  <b>Name</b><br>
+  <%= @check.name %>
+</p>
+
+<p>
+  <b>Command</b><br>
+  <%= @check.cmd %>
+</p>
+
+<p>
+  <b>Target</b><br>
+  <%= @check.target %>
+</p>
+
+<p>
+  <b>Interval</b><br>
+  <%= @check.interval %>
+</p>
+
+<p>
+  <b>Desc</b><br>
+  <%= @check.desc %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', checks_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_check_path(@check), :class => 'btn' %>
+  <%= link_to 'Delete', check_path(@check), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

@@ -1,0 +1,2 @@
+module CheckresultsHelper
+end

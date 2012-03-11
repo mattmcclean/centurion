@@ -1,0 +1,12 @@
+<h1>Node</h1>
+
+<p>
+  <b>Name</b><br>
+  <%= @node.name %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', nodes_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_node_path(@node), :class => 'btn' %>
+  <%= link_to 'Delete', node_path(@node), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

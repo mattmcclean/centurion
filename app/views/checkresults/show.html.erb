@@ -1,0 +1,37 @@
+<h1>Checkresult</h1>
+
+<p>
+  <b>Service</b><br>
+  <%= @checkresult.service %>
+</p>
+
+<p>
+  <b>Checked At</b><br>
+  <%= @checkresult.checked_at %>
+</p>
+
+<p>
+  <b>Return Code</b><br>
+  <%= @checkresult.returncode.name %>
+</p>
+
+<p>
+  <b>Node</b><br>
+  <%= @checkresult.node.name %>
+</p>
+
+<p>
+  <b>Check</b><br>
+  <%= @checkresult.check.name %>
+</p>
+
+<p>
+  <b>Info</b><br>
+  <%= @checkresult.info %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', checkresults_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_checkresult_path(@checkresult), :class => 'btn' %>
+  <%= link_to 'Delete', checkresult_path(@checkresult), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

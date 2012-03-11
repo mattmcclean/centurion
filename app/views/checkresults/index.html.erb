@@ -1,0 +1,26 @@
+<h1>Checkresults</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Service</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @checkresults.each do |checkresult| %>
+      <tr>
+        <td><%= checkresult.id %></td>
+        <td><%= link_to checkresult.service, checkresult_path(checkresult) %></td>
+        <td><%= checkresult.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_checkresult_path(checkresult), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', checkresult_path(checkresult), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_checkresult_path, :class => 'btn btn-primary' %>

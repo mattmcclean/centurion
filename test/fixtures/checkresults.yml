@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+#one:
+#  service: MyString
+#  returncode: 
+#  node: 
+#  check: 
+#  info: MyText
+
+#two:
+#  service: MyString
+#  returncode: 
+#  node: 
+#  check: 
+#  info: MyText

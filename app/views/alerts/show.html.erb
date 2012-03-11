@@ -1,0 +1,27 @@
+<h1>Alert</h1>
+
+<p>
+  <b>Status</b><br>
+  <%= @alert.alertstatus.name %>
+</p>
+
+<p>
+  <b>Result Code</b><br>
+  <%= @alert.checkresult.returncode.name %>
+</p>
+
+<p>
+  <b>Result Info</b><br>
+  <%= @alert.checkresult.info %>
+</p>
+
+<p>
+  <b>Node</b><br>
+  <%= @alert.checkresult.node.name %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', alerts_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_alert_path(@alert), :class => 'btn' %>
+  <%= link_to 'Delete', alert_path(@alert), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

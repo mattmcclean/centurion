@@ -1,0 +1,12 @@
+<%= simple_form_for @subscription, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Subscription</legend>
+
+    <%= f.input :name %>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', subscriptions_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
